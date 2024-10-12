@@ -10,7 +10,7 @@ def hello_world():
     return "<h1>Hello, World!</h1>"
 @app.route("/lols")
 def hello_worldo():
-    return render_template('./temp_file.html')
+    return render_template('frontend.html')
 
 if __name__ == '__main__':  
    app.run()
