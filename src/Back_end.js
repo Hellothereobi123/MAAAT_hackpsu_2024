@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+
 const DataDisplay = () => {
     const [data, setData] = useState(null);
     const [error, setError] = useState('');
@@ -9,7 +10,10 @@ const DataDisplay = () => {
     const fetchData = async () => {
         try {
             // Make sure to use the correct URL to your Flask API
-            const response = await axios.get('https://your-replit-username.your-replit-project.repl.co/api/data');
+            const response = await axios.post('http://68.183.107.61:3002/api/data', {
+                key1: 'value1',
+                key2: 'value2'
+            });
             setData(response.data); // Assuming response.data is the JSON you want
             setError(''); // Clear any previous errors
         } catch (err) {
