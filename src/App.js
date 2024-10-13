@@ -13,6 +13,9 @@ export default function App() {
       <DataDisplay />
       </div>
       <div>
+      <Fileupload />
+      </div>
+      <div>
       <Map />
       </div>
 
